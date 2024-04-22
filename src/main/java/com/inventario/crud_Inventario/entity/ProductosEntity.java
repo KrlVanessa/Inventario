@@ -1,10 +1,11 @@
 package com.inventario.crud_Inventario.entity;
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "products")
 
-public class productos {
+public class ProductosEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -14,11 +15,12 @@ public class productos {
     private int cantidad;
     private int precio;
 
-    public productos() {
+
+    public ProductosEntity() {
 
     }
 
-    public productos(int id, String nombre,String categoria, String descripcion, int cantidad, int precio) {
+    public ProductosEntity(int id, String nombre, String categoria, String descripcion, int cantidad, int precio) {
         this.id = id;
         this.nombre = nombre;
         this.categoria = categoria;
