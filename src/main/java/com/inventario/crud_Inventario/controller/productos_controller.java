@@ -8,9 +8,8 @@ import java.util.List;
 
 @RestController
 //http://localhost:8080/inventario/productos
-
 @RequestMapping("/inventario/productos")
-
+@CrossOrigin(origins = "http://localhost:4200")
 public class productos_controller {
 
     private final productos_service productosService;
@@ -49,6 +48,7 @@ public class productos_controller {
     public productos update(@RequestBody productos producto) {
         productos productosDb = productosService.findById(producto.getId());
         productosDb.setNombre(producto.getNombre());
+        productosDb.setCategoria(producto.getCategoria());
         productosDb.setDescripcion(producto.getDescripcion());
         productosDb.setCantidad(producto.getCantidad());
         productosDb.setPrecio(producto.getPrecio());
