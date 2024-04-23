@@ -1,26 +1,27 @@
+
 package com.inventario.crud_Inventario.entity;
 import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "products")
+@Table(name = "productos")
 
 public class ProductosEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String nombre;
     private String categoria;
     private String descripcion;
-    private int cantidad;
-    private int precio;
+    private Integer cantidad;
+    private Integer precio;
 
 
     public ProductosEntity() {
 
     }
 
-    public ProductosEntity(int id, String nombre, String categoria, String descripcion, int cantidad, int precio) {
+    public ProductosEntity(Integer id, String nombre, String categoria, String descripcion, Integer cantidad, Integer precio) {
         this.id = id;
         this.nombre = nombre;
         this.categoria = categoria;
@@ -30,11 +31,11 @@ public class ProductosEntity {
 
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -62,18 +63,18 @@ public class ProductosEntity {
         this.descripcion = descripcion;
     }
 
-    public int getCantidad() {
+    public Integer getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
 
-    public int getPrecio() {
+    public Integer getPrecio() {
         return precio;
     }
-    public void setPrecio(int precio) {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 }

@@ -13,7 +13,8 @@ public class GlobalExceptionHandler {
 
 @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ErrorDetails> handleResourceNotFoundException(ResourceNotFoundException ex, WebRequest webRequest) {
-    ErrorDetails error = new ErrorDetails(LocalDateTime.now(),
+    ErrorDetails error = new ErrorDetails(
+            LocalDateTime.now(),
             ex.getMessage(),
             webRequest.getDescription(false),
             "NOT FOUND"

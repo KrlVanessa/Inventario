@@ -33,13 +33,13 @@ public class ProductosController {
 
     //http://localhost:8080/inventario/productos/1
     @GetMapping("/{id}")
-    public ProductosEntity findById(@PathVariable int id) {
+    public ProductosEntity findById(@PathVariable Integer id) {
         return productosService.findById(id);
     }
 
     //http://localhost:8080/inventario/productos/1
     @DeleteMapping("/{id}")
-    public  void deleteById(@PathVariable int id) {
+    public  void deleteById(@PathVariable Integer id) {
         productosService.deleteById(id);
     }
 

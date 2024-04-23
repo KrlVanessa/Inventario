@@ -7,8 +7,8 @@ public interface ProductosService {
 
    ProductosEntity save(ProductosEntity producto);
    List<ProductosEntity> findAll();
-   ProductosEntity findById(int id);
-   void deleteById(int id);
+   ProductosEntity findById(Integer id);
+   void deleteById(Integer id);
    ProductosEntity update(ProductosEntity producto);
 
 }
